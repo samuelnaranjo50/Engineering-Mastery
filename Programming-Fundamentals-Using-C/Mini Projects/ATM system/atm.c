@@ -6,7 +6,7 @@ void balance (float *withdraw_count , float *deposited_money, float *account_mon
 void withdraw_money(float *withdraw_limit, float *withdraw_count, float *withdraw_request, float *account_money);
 
 void deposit_money (float *deposit_request, float *account_money, float *deposited_money);
-
+   
 int main ()
 {
 
@@ -15,7 +15,7 @@ int main ()
     float withdraw_request_m;
     float deposited_money_today = 0;
     float deposit_request;
-    float money_in_the_account = 1000;
+    float money_in_the_account = 10000;
 
     int app_running = 0;
     int instructions = -1;
