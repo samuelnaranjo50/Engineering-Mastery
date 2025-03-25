@@ -1,5 +1,5 @@
 #include <stdio.h>
-main()
+int main()
 {
     //lift off simulation using a for loop
     for(int index = 10; index >= 0; index--)

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main ()
+int main ()
 {
     printf("DISCO PARTY DOOR");
 
