@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal data & information form</title>
+</head>
+<body>
+    <h1>Personal data & information</h1>
+    <h2>👋 Tell Us About You</h2>
+    <p>To help us get to know you better and keep you informed about club events and opportunities, please fill out the following information:</p>
+    
+    <h3>📌 What we need:</h3>
+    <ul>
+        <li><strong>Full Name </strong> So we know who you are!</li>
+        <li><strong>Major </strong> Just to get a sense of your academic focus.</li>
+        <li><strong>Email Address </strong>  For event updates, meeting invites, and important news.</li>
+        <li><strong>Phone Number (optional) </strong>  In case we need to send quick reminders or last-minute updates.</li>
+    </ul>
+
+
+    <h2>Form</h2>
+    <form action="">
+        <fieldset>
+            <legend>Personal data</legend>
+            <label for="name">Name</label>
+            <input type="text" name="full_name_student" id="name" placeholder="Frederic Lockavoski.." required> <br>
+
+            <label for="major">Major</label>
+            <select name="major_student" id="major" required>
+                <option value="none" selected disabled>Choose you major</option>
+                <option value="cs & engineering">CS & Engineering</option>
+                
+                <option value="cs & electrical engineering">CS & Electrical Engineering</option>
+                <option value="mechanical engineering">Mechanical Engineering</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact information</legend>
+            <label for="student_email">Email @</label>
+            <input type="email" name="student_email" id="student_email" required> <br>
+
+            <label for="student_phone">Phone(optional)</label>
+            <input type="number" name="student_phone" id="student_phone" required>
+        </fieldset>
+
+        <input type="submit">
+    </form>
+
+
+    <nav>
+        <a href="index.html">Return</a>
+    </nav>
+</body>
+</html>
