@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Register Form</h2>
+
+    <form action="">
+      <fieldset>
+        <legend>Fundamental information</legend>
+        <label for="user_name">Create your username</label>
+        <input type="text" name="user_name" id="user_name" required />
+        <br />
+        <label for="user_email">Add you email</label>
+        <input type="email" name="email" id="user_email" required />
+        <br />
+        <label for="user_password">Create your password</label>
+        <input type="password" name="password" id="user_password" required />
+        <br />
+        <label for="user_password_confirmation">Confirm your password</label>
+        <input
+          type="password"
+          name="password_confirmation"
+          id="user_password_confirmation"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Useful info</legend>
+
+        <fieldset>
+          <legend>Dog size</legend>
+          <label>
+            <input type="radio" name="puppy_size" id="puppy_small" required/>
+            small</label
+          >
+
+          <br />
+
+          <label>
+            <input type="radio" name="puppy_size" id="puppy_medium" />
+            Medium</label
+          >
+
+          <br />
+
+          <label>
+            <input type="radio" name="puppy_size" id="puppy_big" />
+            Big</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Dog Favorite flavor</legend>
+          <label>
+            <input type="checkbox" name="puppy_flavor" id="chiken" required/>
+            Chiken</label
+          >
+
+          <br />
+
+          <label>
+              <input type="checkbox" name="puppy_flavor" id="lamb" />
+              Lamb</label
+            >
+
+            <br />
+
+          <label>
+              <input type="checkbox" name="puppy_flavor" id="salmon" />
+              Salmon</label
+            >
+
+            <br />
+
+        </fieldset>
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
+
+    
+</body>
+</html>
