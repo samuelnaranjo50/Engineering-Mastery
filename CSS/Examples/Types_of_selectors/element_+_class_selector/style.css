@@ -1,0 +1,23 @@
+.highlight_text {
+    background-color: aquamarine;
+ }
+
+ dt.highlight_text {
+    background-color: brown;
+ }
+
+ dt.classname {
+color: ;
+ }
+
+ dl dd {
+    color: green;
+ }
+
+ #description_list2 dd{
+    opacity: 10%;
+ }
+
+ .description_list dt{
+    font-size: 20px;
+ }
