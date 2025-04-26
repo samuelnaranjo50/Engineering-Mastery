@@ -1,0 +1,38 @@
+h2 {
+    font-size: 50px;
+}
+
+h2#css_header {
+    color: aquamarine;
+}
+
+.main_container_section > p{
+    color: gray;
+
+}
+
+h3 {
+    color: yellowgreen;
+}
+
+.red {
+
+    color: red;
+
+}
+
+#specific_blue {
+    color: blue;
+}
+
+#mini_section >h3 {
+    color: green;
+}
+
+#mini_section h3 {
+    color: pink;
+}
+
+#specific_h3 {
+    color: lightblue;
+}
