@@ -1,0 +1,23 @@
+body{
+    font-family: 'Times New Roman', Times, serif
+}
+h2 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.lowercase_text {
+    text-transform: lowercase;
+}
+
+.uppercase_text {
+    text-transform: uppercase;
+}
+
+.capitalize_text {
+    text-transform: capitalize;
+}
+

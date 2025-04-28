@@ -1,0 +1,31 @@
+#rgb1 {
+    color: rgb(0,128,128);
+}
+
+#rgb2 {
+    color: rgb(230,230,250);
+}
+
+#rgba1 {
+    color: rgba(135, 206, 235, 100% );
+}
+#rgba2 {
+    color: rgba(135, 206, 235, 50% );
+}
+
+#hsl1 {
+    color: hsl(20, 80%, 28%);
+}
+
+#hsl2 {
+    color: hsl( 43, 84%, 49%);
+}
+
+#hex1 {
+    color: #FF6B6B;
+}
+
+#hex2 {
+    color: #4ECDC4;
+}
+
