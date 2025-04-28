@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Descendent selector type</title>
-</head>
-<body>
-    <h2>Random fact one</h2>
-    <p class="highlight_text">This is fact one.</p>
-    <p class="highlight_text">This is second paragraph for fact one.</p>
-    <h2>Another random fact</h2>
-    <p>This is fact two.</p>
-    <p>This is second paragraph for fact two.</p>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
 
-    <dl>
-        <dt class="highlight_text">Random fact one</dt>
-        <dd>This is fact one.</dd>
-        <dd>This is second paragraph for fact one.</dd>
-        <dt class="highlight_text">Another random fact</dt>
-        <dd>This is fact two.</dd>
-        <dd>This is second paragraph for fact two.</dd>
+    <div class="unsemantic_container1">
+      <h2>First Div</h2>
+      <p>
+        Random number: <span >42</span>
+      </p>
+      <p >
+        Some text: <span >Hello, world!</span>
+      </p>
+      <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
 
-
-    
-</body>
+    <div>
+      <h2>Second Div</h2>
+      <p>
+        Random number: <span >123</span>
+      </p>
+      <p>
+        Another text:
+        <span>Goodbye, universe!</span>
+      </p>
+      <ol class="list">
+        <li>Step A</li>
+        <li>Step B</li>
+        <li>Step C</li>
+      </ol>
+    </div>
+  </body>
 </html>
