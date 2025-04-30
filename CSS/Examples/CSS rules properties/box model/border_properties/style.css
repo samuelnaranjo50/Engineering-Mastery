@@ -1,0 +1,9 @@
+#mytext {
+    border: 10px dashed aliceblue;
+    width: 200px;
+    height: auto;
+    padding: 50px 100px;
+
+    border: 1px solid black
+}
+

@@ -1,0 +1,10 @@
+#mycontainer {
+    width: 200px;
+    height: 40px;
+    background-color: brown;
+}
+#mytext  {
+    border: dotted black 3px;
+    width: 100px;
+    height: auto;
+}
