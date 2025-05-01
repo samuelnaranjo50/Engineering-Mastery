@@ -1,0 +1,28 @@
+
+#heading_align_2 {
+    text-align: center;
+}
+
+#heading_align_3 {
+    text-align: right;
+}
+
+#text_align_2 {
+    text-align: center;
+}
+
+#text_align_3 {
+    text-align: right;
+}
+
+#text_align_4 {
+    text-align: justify;
+}
+
+#mixing_h_b_3 > h3 {
+    text-align: center;
+}
+
+#mixing_h_b_3 > p {
+    text-align: center;
+}
