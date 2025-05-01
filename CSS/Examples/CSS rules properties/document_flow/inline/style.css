@@ -1,0 +1,20 @@
+#by_default_block {
+    width: auto;
+    height: auto;
+}
+
+#by_default_block > div {
+    width: 200px;
+    height: 40px;
+    background-color: gray;
+    margin: 20px;
+    display: inline-block;
+
+}
+
+p {
+    border: 1px solid black ;
+    padding: 10px;
+    display:inline;
+}
+

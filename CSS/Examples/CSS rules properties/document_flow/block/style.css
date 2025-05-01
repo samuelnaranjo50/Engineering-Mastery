@@ -1,0 +1,10 @@
+#by_default_block > div {
+    width: 200px;
+    height: 40px;
+    background-color: gray;
+    margin: 20px;
+}
+
+#by_default_inline > img {
+    display: block;
+}
