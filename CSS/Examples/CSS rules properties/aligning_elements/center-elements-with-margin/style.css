@@ -1,0 +1,28 @@
+.alignment_div {
+    width: 200px;
+    height: 50px;
+    background-color: #00ffff;
+    opacity: 30%;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+
+#center_parent {
+    border: 1px dotted black;
+    padding: 10px;
+}
+.parent_div {
+    border: 1px dotted black;
+    margin: 10px 0px;
+    height: 50px;
+    padding: 10px;
+}
+
+#center_parent > div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left_parent > div{
+    float: right;
+}
