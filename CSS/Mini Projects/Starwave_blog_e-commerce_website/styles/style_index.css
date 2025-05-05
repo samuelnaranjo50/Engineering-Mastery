@@ -1,0 +1,164 @@
+
+body {
+    background-color: #2b3537;
+}
+h2{
+    color: #f1d8c4;
+}
+header {
+    
+    border-radius: 10px;
+    background-color: #c87c0c;
+    display: inline-block;
+    width: 30%;
+    height: 55px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 10px;
+    
+}
+
+header h1 {
+    text-align: center;
+    vertical-align: middle;
+    color: #f1d8c4;
+    
+    
+}
+
+nav {
+    display: inline-block;
+    width: 60%;
+    height: 55px;
+    border-radius: 10px;
+    background-color: #c87c0c;
+    color: #f1d8c4;
+
+}
+
+
+nav > ul {
+
+   margin: 0px auto;
+   padding-left: 10%;
+   padding-right: 10%;
+}
+#nav_ul > li {
+    display: inline;
+    text-decoration: none;
+ }
+
+ #nav_ul  a {
+    text-decoration: none;
+    color: #f1d8c4 ;
+ }
+
+ #nav_ul  img {
+    height: 40px;
+    width: 40px;
+    filter: invert(90%)
+    
+ }
+
+
+
+ /* Main section */
+
+ /* section 1 - main section */
+
+ #section_shop {
+    background-color: #b0333b;
+    border-radius: 50px;
+    margin: 0px 50px;
+ }
+
+  /* divs - section 1 - main section */
+
+  #div_elements_container{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+ #div_elements_container > div {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px 20px;
+
+ }
+  
+
+  /* divs content - section 1 - main section */
+
+  #section_shop img {
+    display: block;
+    
+    border-radius: 20px;
+    width: 125px;
+    height: 125px;
+    margin: 10px auto 0px auto;
+    
+  }
+
+  #section_shop  button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    color: #f1d8c4;
+    background-color:#b0333b;
+    margin-top: 20px;
+  }
+
+  #section_shop div > p{
+    text-align: center;
+  }
+
+
+
+ /* section 2 - main section */
+
+ #section_article {
+    background-color: #8aa7ab;
+    border-radius: 50px;
+    margin: 0px 50px;
+
+ }
+
+ .article__container {
+    display: inline-block;
+    background-color: #2b3537;
+    border-radius: 50px;
+    margin: 20px;
+    width: 170px;
+    height: 200px;
+ }
+
+ .article__container div {
+  height: 50px;
+  background-color: #f1d8c4;
+  border-radius: 50px;
+  margin: 10px;
+  
+ }
+
+ .article__container a {
+    text-align: center;
+    text-decoration: none;
+ }
+
+ .article__container h3 {
+    color: #f1d8c4;
+    text-align: center;
+    
+ }
+
+
+.expand_section {
+    display: block;
+    text-align: center;
+}
