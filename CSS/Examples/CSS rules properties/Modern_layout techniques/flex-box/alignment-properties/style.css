@@ -1,0 +1,53 @@
+.flex_container {
+    border: 0.1vh solid aliceblue;
+    width: 100vh;
+    height: 20vh;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.divs {
+    width: 100px;
+    height: 50px;
+    background-color: aliceblue;
+}
+
+#div_1 {
+    width: 100px;
+    height: 10px;
+    background-color: aliceblue;
+}
+#div_3 {
+
+    height: 100px;
+    background-color: aliceblue;
+}
+
+nav {
+    border: 1px solid black;
+}
+nav ul {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap ;
+    flex-direction: column;
+}
+
+nav li {
+    display: flex;
+
+
+}
+
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
