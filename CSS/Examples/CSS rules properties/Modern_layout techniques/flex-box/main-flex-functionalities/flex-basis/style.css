@@ -1,0 +1,28 @@
+#flex_container1{
+    background-color:  powderblue;
+    display: flex;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+    height:15vh;
+}
+
+#flex_container1 > div{
+    background-color:  bisque;
+    height: 5vh;
+    flex-basis:  22vh; 
+ 
+}
+
+#div_1 {
+    width: 18vh;
+    
+}
+
+#div_2 {
+    width: 15vh;
+}
+
+#div_3{
+    width: 13vh;
+}

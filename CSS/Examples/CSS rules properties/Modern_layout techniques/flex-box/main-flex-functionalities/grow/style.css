@@ -1,0 +1,44 @@
+
+.flex_container {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border: 0.1vh solid aliceblue;
+    display: flex;
+    gap: 1vh;
+}
+#flex_container1 > div {
+    flex-grow: 0 ;
+}
+
+#flex_container2 > div {
+    flex-grow: 1;
+}
+#flex_container2 p {
+    text-align: center;
+}
+
+#flex_container3 p{
+   text-align: center;  
+}
+
+#div_1_container3 {
+    flex-grow: 1;
+}
+#div_2_container3 {
+    flex-grow: 2;
+}
+#div_3_container3 {
+    flex-grow: 3;
+}
+#div_4_container3 {
+    flex-grow: 1;
+}
+
+
+
+.divs {
+    height: 50px;
+    background-color: aliceblue;
+    width: 15vh;
+
+}

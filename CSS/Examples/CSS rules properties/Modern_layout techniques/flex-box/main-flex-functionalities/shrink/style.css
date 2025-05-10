@@ -1,0 +1,30 @@
+.flex_container {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border: 0.1vh solid aliceblue;
+    display: flex;
+    gap: 1vh;
+}
+.divs {
+    height: 50px;
+    background-color: aliceblue;
+    width: 25vh;
+
+}
+
+#flex_container1 > div {
+    flex-shrink: 1;
+}
+
+#div1_container2 {
+    flex-shrink: 2;
+}
+
+#div3_container2 {
+    flex-shrink: 2;
+}
+
+
+#flex_container3 > div {
+    flex-shrink: 0;
+}
