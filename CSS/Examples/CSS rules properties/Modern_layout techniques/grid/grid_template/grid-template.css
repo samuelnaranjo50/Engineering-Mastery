@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+}
+
+body {
+  display: grid;
+  color: black;
+  
+  grid-template-columns: repeat(4, minmax(10vh, 1fr));
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas: "header header nav nav"
+  "main main aside aside"
+   "main main aside aside"
+      "footer footer footer footer";
+}
+
+header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+nav {
+    grid-area: nav;
+    background-color: aquamarine;
+}
+
+main {
+    grid-area: main;
+    background-color: yellowgreen;
+}
+
+aside{
+    grid-area: aside;
+    background-color: rebeccapurple ;
+}
+
+footer {
+    grid-area: footer;
+    background-color: chartreuse;
+}
+
