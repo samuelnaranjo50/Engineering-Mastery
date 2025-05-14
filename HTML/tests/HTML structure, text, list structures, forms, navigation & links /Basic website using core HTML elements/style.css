@@ -1,0 +1,49 @@
+nav {
+    background-color: beige;
+    border-radius: 20px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    
+
+}
+
+dl {
+    display: flex;
+    gap: 3vw;
+}
+dl div {
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    
+    
+}
+
+dl dt {
+    text-align: center;
+    font-size: 2em;
+}
