@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    margin: auto;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh ;
+}
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 30vh;
+    border: 1px solid white;
+    border-radius: 10px;   
+    color: white;   
+}
+
+.parent a:link {
+    color: white;
+    text-decoration: underline;
+   
+}
+.parent a:hover {
+    font-size: 3vh;
+}
+
+
+.parent a:visited {
+    color: rgb(165, 248, 253);
+    text-decoration-style: wavy;
+}
+
+
+
+
