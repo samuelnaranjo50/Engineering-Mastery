@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo classes Disable & enable</title>
+    <link rel="stylesheet" href="disabled_enable.css" />
+  </head>
+  <body>
+    <div id="container_1">
+      <div class="form_parent">
+        <h2>Our form</h2>
+        <form action="">
+          <label for="disabled_text">Text (disabled) </label>
+          <input
+            id="disabled_text"
+            type="text"
+            placeholder="Here will your name go"
+            disabled
+          />
+          <label for="enabled_text">Text (enabled)</label>
+          <input id="enabled_text" type="text" placeholder="Sam " enabled />
+          <label for="disabled_input">Button (disabled)</label>
+          <button id="disabled_input" type="submit" disabled>
+            don't click
+          </button>
+          <label for="enable_input">Button (enabled)</label>
+          <button id="enable_input" type="submit" enabled>
+            Submit the form
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

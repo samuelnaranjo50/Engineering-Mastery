@@ -1,0 +1,55 @@
+#container_1{
+    margin-top:3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #a5d8ff;
+    flex: 0 50vh;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+input[type="radio"]:checked {
+  background-color: aliceblue;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  
+  margin-right: 8px;
+}
+input[type="checkbox"]:checked {
+    background-color: plum;
+
+}
+
+button:enabled{
+    background-color: plum;
+    opacity: 80%;
+    border-radius: 20px;
+}
+
