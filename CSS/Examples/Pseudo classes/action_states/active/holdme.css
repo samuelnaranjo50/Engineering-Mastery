@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    margin: auto;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh ;
+}
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 30vh;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#holdme {
+    background-color: gray;
+    border-radius: 20px;
+    width: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#holdme > p{
+    text-align: center;
+}
+
+#holdme:active {
+    background-color: #ECFAE5;
+    height: 10vh;
+    width: 30vh;
+    font-size: 20px;
+}
+
