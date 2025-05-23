@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Alex+Brush&family=Erica+One&display=swap');
+
+body {
+  font-family: "Alex Brush", cursive;
+  font-weight: 200;
+  font-size: 10vw;
+  font-style: thin;
+  color: #F3ECE6;
+  background-color: black;
+
+}
+div {
+    margin: 50% auto;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+img {
+    width: 80%;
+    border-radius: 50px;
+    opacity: 80%;
+    box-shadow: 12px 10px;
+   
+    
+}
+
+a:link{
+   
+    color: #F7F1F1;
+}
+
+a:visited{
+   
+    color: #F7F1F1;
+}

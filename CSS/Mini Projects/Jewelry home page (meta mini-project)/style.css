@@ -1,0 +1,453 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Alex+Brush&family=Erica+One&display=swap');
+
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 200;
+  font-style: thin;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #F3ECE6;
+    font-family: "Alex Brush", cursive;
+    font-style: thin;
+    font-size: 1.5rem;
+}
+
+.container {
+    margin: 3vh 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8vw;
+    flex-wrap: wrap;
+}
+
+/* Upper section sub elements */
+
+/* Nav and header alignment */
+
+nav, header {
+    height: 45px;
+    flex: 2 1 auto;
+    display: flex;
+}
+
+/* Nav styling */
+nav {
+    background-color: #38332F ;
+    opacity: 50%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: 10;
+   
+    
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10vw;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+nav a:link {
+    
+    text-decoration: none;
+    color: #F3ECE6;
+
+}
+
+/* Header styling */
+
+header {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+}
+
+header h1 {
+    display: none;
+    
+
+}
+
+header img {
+    width: auto;
+    height: 1.7vh;
+    margin-left: 3vw;
+    
+}
+
+/*MAIN SECTION */
+
+/* Promotional article */
+
+#promotional_sec {
+    margin: 3vh 5vh;
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#promotional_img_container {
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/mangata_pictures/retrato-de-hermosa-dama-rubia-con-elegante-vestido-de-seda-blanco-chaqueta-cuadros-y-collar-de-perlas-tocando-suavemente-el-cuello-y-posando-en-la-plaza-de-la-ciudad.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 80%;
+}
+
+#promotional_sec .over_text_container {
+    top: 0; /* This one move it to the top */
+    
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+
+}
+/* Text main promotional sec */
+
+.over_text_container h2 {
+   
+    font-size: 12.5rem;
+    font-weight: 10;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+   
+}
+
+.over_text_container p {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 1.25rem;
+    font-size: normal;
+    font-weight: 300;
+    width: 70%;
+    text-align: center;
+}
+
+.over_text_container button {
+    margin-top: 2vh;
+    border: 2px solid #F7F1F1; 
+    border-radius: 50px;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    width: 300px;
+    height: 50px;
+    color: #F7F1F1;
+    background-color: transparent;
+}
+/* Sub Promotional articles */
+
+#products {
+    margin: 3vh 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+#products article {
+    width: 30%;
+    height: 35vh;
+    overflow: hidden;
+    border-radius: 50px;
+    opacity: 80%;
+
+}
+
+#products article:nth-of-type(1) {
+    background-image: url(/images/mangata_pictures/anillo-de-oro-caro-con-fondo-de-polvo-blanco\ \(2\).jpg);
+    background-position: center;
+    background-size: cover;
+}
+#products article:nth-of-type(2) {
+    background-image: url(/images/mangata_pictures/hermoso-anillo-de-compromiso-con-diamantes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#products article:nth-of-type(3) {
+    background-image: url(/images/mangata_pictures/anillo-de-oro-caro-que-se-muestra-sobre-fondo-de-coral-blanco.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+#products img {
+    
+    height: 100%;
+}
+
+/*FOOTER SECTION */
+footer {
+    margin: 3vh 5vh;
+    display: flex;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer div{
+    height: 45px;
+    background-color: #38332F ;
+    opacity: 50%;
+}
+
+.aesthetic_circles {
+    width: 5vw;
+    border-radius: 50px;
+}
+
+.footer_information {
+   width: 500px;
+   border-radius: 50px;
+   font-weight: 100;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ 
+}
+
+
+/*FIRST MEDIA QUERY LARGE DEVICES (LG) */
+
+@media (max-width: 1200px) {
+  /* Styles for screens 1120px or smaller */
+  
+  /* TOP CONTAINER */
+  .container {
+    gap: 4vh;
+    margin: 3vh 5vh;
+  }
+
+  /*MAIN PROMOTIONAL SEC*/
+  #promotional_sec .over_text_container {
+    justify-content: center;
+  }
+  .over_text_container h2 {
+    font-size: 8rem;
+    font-weight: 100;
+    height: 17vw;
+}
+   /*SUB PROMOTIONAL SEC*/
+   #products {
+    flex-wrap: wrap;
+    gap: 3vh;
+    
+   }
+
+   #products article {
+    flex: 1 1 100%;
+    height: 25vh;
+    
+   }
+}
+
+
+/*SECOND MEDIA QUERY MEDIUM DEVICES (MD) */
+
+@media (max-width: 800px) {
+  /* Styles for screens 1120px or smaller */
+   .container {
+    gap: 2vh;
+  }
+  /*NAV*/
+   #nav {
+    height: auto;
+  }
+  #nav ul {
+    
+    gap: 8vw;
+  }
+
+  #promotional_sec .over_text_container {
+    justify-content: center;
+  }
+  .over_text_container h2 {
+    font-size: 15vw;
+    font-weight: 100;
+    height: 17vw;
+}
+.aesthetic_circles {
+    display: none;
+}
+
+.separator {
+    display: block;
+}
+
+}
+
+
+/*THIRD MEDIA QUERY SMALL DEVICES (SM) */
+
+@media (max-width: 600px) {
+  /* Styles for screens 1120px or smaller */
+  
+  body {
+    font-size: 1.3rem;
+}
+
+  /*NAV*/
+  #nav {
+    height: auto;
+  }
+  #nav ul {
+    
+    margin: auto 4vw;
+    gap: 2vh;
+  }
+
+  /*MAIN PROMOTIONAL SEC*/
+  
+  
+
+  
+  .over_text_container h2 {
+    font-size: 12vw;
+    font-weight: 100;
+    height: 17vw;
+}
+
+  .over_text_container p {
+    font-size: 3vw;
+    font-weight: 100;
+}
+  .over_text_container button  {
+    font-size: 4vw;
+    font-weight: 100;
+    width: 200px;
+    height: 40px;
+}
+  
+}
+
+
+/* EFECTS */
+
+/* Nav*/
+
+
+.noise_layer {
+    position: relative; /* To add an overlaying noise background */
+    overflow: hidden;
+}
+
+.noise_layer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 25% ;
+    background-image: url(/images/others/63518.jpg);
+    pointer-events: none;
+
+}
+
+nav ul li{
+     border: 2px solid transparent;
+     padding: 3px;
+}
+nav ul li:hover{
+   
+    border-radius: 50px;
+    background-color: rgba(243, 236, 230, 10%)  ;
+}
+
+nav ul li a:visited{
+   
+    color: #F7F1F1;
+}
+
+/*MAIN SECTION*/
+
+/*HERO*/
+
+/*Background*/
+
+
+#promotional_img_container:hover {
+  animation: image_grow 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes image_grow {
+  0%   { transform: scale(1); }
+  100%  { transform: scale(1.01); }
+  
+}
+
+/*button*/
+
+.over_text_container button:hover {
+    background-color: rgba(243, 236, 230, 10%);
+    cursor: pointer;
+}
+
+/* SUB HEROS*/
+
+#products article:hover {
+    opacity: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#products article .hover_text_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#products article .hover_text_container:hover::after {
+    content: "Discover more...";
+}
+
+::after {
+    background-color: rgba(243, 236, 230, 10%);
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+   
+}
+
+
