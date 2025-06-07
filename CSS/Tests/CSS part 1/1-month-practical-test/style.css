@@ -1,0 +1,28 @@
+.highlight {
+    color: purple;
+    font-family: Arial;
+    text-decoration: underline;
+    text-decoration-thickness: 1px ;
+    
+}
+
+.child_container {
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+.box {
+    color: green;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 30px;;
+}
+
+#container_of_not_class > span, #container_of_not_class > div{
+    display: inline-block;
+}
