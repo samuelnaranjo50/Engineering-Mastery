@@ -1,0 +1,2 @@
+ls: stdout-list.txt: No such file or directory
+-rw-r--r--  1 s_n_gr  staff  303 Jun  6 10:36 names.txt

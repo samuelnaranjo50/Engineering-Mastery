@@ -1,0 +1,4 @@
+total 8
+drwxr-xr-x  2 s_n_gr  staff   64 Jun  7 06:48 Examples
+-rw-r--r--  1 s_n_gr  staff    0 Jun  7 06:50 dir_info_output.txt
+-rw-r--r--  1 s_n_gr  staff  303 Jun  6 10:36 names.txt
