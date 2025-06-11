@@ -1,0 +1,17 @@
+nav {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8vw;
+}
+
+ul {
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+li {
+  flex: 1 0 auto;
+  list-style-type: none;
+}
