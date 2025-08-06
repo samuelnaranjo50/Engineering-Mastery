@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div id="Main_container">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    let MainContainer_reference = document.getElementById("Main_container");
+    let divs = MainContainer_reference.querySelectorAll('div');
+
+    //Creating a loop to iterate and modify elements
+    divs.forEach(element => { 
+        element.innerHTML = 'Hello World';
+    });
+
+
+</script>
