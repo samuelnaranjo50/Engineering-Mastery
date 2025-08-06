@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div id="Main_container" style="display:flex; flex-direction: column; align-items: center;">
+        <h2>This is my mood</h2>
+        <p style="font-size: 16px;">I'm: </p>
+        <button style="border-radius: 50px; width: 200px; height: 50px;">Change my mood</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    let MainContainer_reference = document.getElementById("Main_container");
+    let button = MainContainer_reference.querySelector('button');
+
+    //Listening for the event to modify the content
+
+        //Select the text to change
+    let text = MainContainer_reference.querySelector('p');
+
+    let mood = false;
+    
+    button.addEventListener('click', () => {
+        mood =! mood; //Change mood boolean value
+
+        if (mood == false){
+            text.textContent = "I'm: sad 😢"
+        }
+        else {
+             text.textContent = "I'm: happy 😊"
+        }
+
+    })
+  
+
+</script>
