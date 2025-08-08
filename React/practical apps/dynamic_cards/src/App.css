@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.card_template {
+  background-color: black;
+  color: white;
+  margin: 80px;
+  border-radius: 50px;
+  
+}
