@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+}
+#container_1{
+    margin-top:3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #a5d8ff;
+    flex: 0 50vh;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    
+}
+
+[type="email"] {
+    border-radius: 20px;
+    background-color: plum;
+    opacity: 80%;
+}
+
+[type="email"]::placeholder {
+    color: white;
+    font-weight: bold;
+    
+}
+
+button:enabled{
+    background-color: plum;
+    opacity: 80%;
+    border-radius: 20px;
+    color: white;
+}

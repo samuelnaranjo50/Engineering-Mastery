@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simulador ampliado SISBÉN IV - Prototipo educativo</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:18px;background:#f8fafc;color:#0f172a}
+    .card{background:white;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,.08);max-width:860px;margin:12px auto}
+    h1{font-size:22px;margin-bottom:12px}
+    h2{font-size:18px;margin-top:20px;border-bottom:1px solid #e2e8f0;padding-bottom:4px}
+    label{display:block;margin:10px 0 6px;font-weight:600}
+    select,input[type=number],input[type=text],textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #e6edf3}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:none;background:#0ea5a0;color:white;font-weight:700;cursor:pointer}
+    .muted{color:#475569;font-size:13px}
+    .result{margin-top:14px;padding:12px;border-radius:10px;background:#f1f5f9}
+    .bar{height:16px;border-radius:8px;background:#e2e8f0;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,#fb7185,#f97316);}
+    small{display:block;color:#475569;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Simulador ampliado del SISBÉN IV — Prototipo educativo</h1>
+    <p class="muted">Este simulador educativo estima aproximadamente el grupo (A,B,C,D) según dimensiones socioeconómicas del SISBÉN IV. No reemplaza la encuesta oficial del DNP.</p>
+
+    <form id="simform">
+      <h2>🏠 Vivienda y servicios públicos</h2>
+      <label>Piso principal</label>
+      <select id="piso"><option value="0">Alta calidad</option><option value="5">Intermedio</option><option value="10">Tierra u otro básico</option></select>
+
+      <label>Material de las paredes</label>
+      <select id="paredes"><option value="0">Ladrillo, bloque, concreto</option><option value="5">Madera pulida o prefabricado</option><option value="10">Bahareque, tabla o material de desecho</option></select>
+
+      <label>Techo</label>
+      <select id="techo"><option value="0">Concreto o teja buena</option><option value="5">Zinc o fibrocemento</option><option value="10">Desecho o palma</option></select>
+
+      <label>Fuente de agua</label>
+      <select id="agua"><option value="0">Acueducto</option><option value="5">Pozo o carro tanque</option><option value="10">Lluvia u otra fuente no segura</option></select>
+
+      <label>Servicio sanitario</label>
+      <select id="sanitario"><option value="0">Alcantarillado</option><option value="5">Fosa o compartido</option><option value="10">Sin sanitario adecuado</option></select>
+
+      <label>Energía eléctrica</label>
+      <select id="energia"><option value="0">Sí, estable</option><option value="5">Intermitente</option><option value="10">No tiene</option></select>
+
+      <h2>👨‍👩‍👧 Hogar y composición</h2>
+      <label>Número de personas en el hogar</label>
+      <select id="personas"><option value="0">1-2</option><option value="5">3-4</option><option value="10">5 o más</option></select>
+
+      <label>Personas dependientes (niños, adultos mayores, discapacidad)</label>
+      <select id="dependientes"><option value="0">0</option><option value="5">1-2</option><option value="10">3 o más</option></select>
+
+      <label>Hacinamiento (personas por habitación)</label>
+      <select id="hacinamiento"><option value="0">< 2</option><option value="5">2-3</option><option value="10">>3</option></select>
+
+      <h2>📚 Educación</h2>
+      <label>Nivel educativo más alto en el hogar</label>
+      <select id="educacion"><option value="0">Profesional</option><option value="5">Técnico/Tecnólogo</option><option value="8">Secundaria completa</option><option value="10">Primaria o menos</option></select>
+
+      <label>¿Algún miembro asiste actualmente a clases?</label>
+      <select id="asiste"><option value="0">Sí</option><option value="5">No</option></select>
+
+      <h2>💼 Ocupación e ingresos</h2>
+      <label>Ingreso mensual total (COP)</label>
+      <select id="ingreso"><option value="0">> 4 SMMLV</option><option value="5">2-4 SMMLV</option><option value="8">1-2 SMMLV</option><option value="12">< 1 SMMLV</option></select>
+
+      <label>Situación laboral principal</label>
+      <select id="empleo"><option value="0">Empleado formal</option><option value="5">Informal o jornalero</option><option value="10">Desempleado</option></select>
+
+      <label>Afiliación a seguridad social</label>
+      <select id="salud"><option value="0">Contributivo</option><option value="5">Subsidiado</option><option value="10">No afiliado</option></select>
+
+      <h2>🧺 Bienes y condiciones</h2>
+      <label>Número de bienes durables (TV, nevera, lavadora, vehículo)</label>
+      <select id="bienes"><option value="0">3 o más</option><option value="5">1-2</option><option value="10">0</option></select>
+
+      <label>Acceso a internet</label>
+      <select id="internet"><option value="0">Sí</option><option value="5">No</option></select>
+
+      <label>Uso de gas para cocinar</label>
+      <select id="gas"><option value="0">Sí (red o cilindro)</option><option value="5">Leña u otro</option></select>
+
+      <h2>❤️ Salud y bienestar</h2>
+      <label>Miembros con discapacidad o enfermedad prolongada</label>
+      <select id="discapacidad"><option value="0">Ninguno</option><option value="5">1 persona</option><option value="10">2 o más</option></select>
+
+      <label>Acceso a servicios de salud en el último año</label>
+      <select id="atencion"><option value="0">Sí, siempre</option><option value="5">A veces</option><option value="10">No</option></select>
+
+      <h2>📊 Cálculo</h2>
+      <button type="button" class="btn" onclick="calcular()">Calcular clasificación aproximada</button>
+      <button type="reset" class="btn" style="margin-left:8px" onclick="limpiar()">Limpiar</button>
+
+      <div id="salida" class="result" hidden>
+        <h3 id="grupo"></h3>
+        <div class="bar"><i id="barfill" style="width:0%"></i></div>
+        <small id="nota"></small>
+        <pre id="detalles" style="background:transparent;border:none;padding:0;font-family:inherit"></pre>
+      </div>
+
+      <p class="muted" style="margin-top:12px">Basado en las dimensiones oficiales del SISBÉN IV. Solo orientación educativa. La clasificación real la determina el DNP mediante metodología reservada.</p>
+    </form>
+  </div>
+
+  <script>
+    function calcular(){
+      const campos=[ 'piso','paredes','techo','agua','sanitario','energia','personas','dependientes','hacinamiento','educacion','asiste','ingreso','empleo','salud','bienes','internet','gas','discapacidad','atencion'];
+      let total=0; campos.forEach(id=>total+=Number(document.getElementById(id).value));
+      const max=campos.length*10; // normalizado
+      const score=Math.round((total/max)*100);
+      let grupo='';
+      if(score>=75) grupo='Grupo A (pobreza extrema)';
+      else if(score>=55) grupo='Grupo B (pobreza moderada)';
+      else if(score>=30) grupo='Grupo C (vulnerable)';
+      else grupo='Grupo D (no vulnerable)';
+
+      document.getElementById('grupo').innerText=grupo+' — estimación';
+      document.getElementById('barfill').style.width=score+'%';
+      document.getElementById('nota').innerText=`Índice estimado de vulnerabilidad: ${score}/100.`;
+      document.getElementById('salida').hidden=false;
+      document.getElementById('detalles').innerText=campos.map(id=>{
+        const el=document.getElementById(id);
+        return `${el.previousElementSibling.innerText}: ${el.options[el.selectedIndex].text} (valor ${el.value})`;
+      }).join('\n');
+
+      const recomendacion=(score>=55)?'\nRecomendación: Podrías solicitar la encuesta, ya que es probable que estés en un grupo elegible para programas sociales.':'\nRecomendación: Probablemente no estés entre los más vulnerables, pero puedes revisar tus datos oficiales en la plataforma SISBÉN.';
+      document.getElementById('detalles').innerText+='\n'+recomendacion;
+    }
+    function limpiar(){document.getElementById('salida').hidden=true;}
+  </script>
+</body>
+</html>

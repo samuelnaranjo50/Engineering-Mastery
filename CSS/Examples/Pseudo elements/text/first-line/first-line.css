@@ -1,0 +1,4 @@
+.parent p::first-line {
+    font-size: 3vh;
+}
+

@@ -1,0 +1,9 @@
+::selection {
+   background-color: aquamarine;
+}
+
+p:first-of-type::selection {
+    background-color: black;
+    color: white;
+}
+

@@ -1,0 +1,8 @@
+.parent {
+    font-size: 3vh;
+}
+.parent > p::first-letter {
+    font-size: 5vh;
+    color: gray;
+
+}

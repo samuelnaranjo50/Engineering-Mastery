@@ -1,0 +1,3 @@
+# Avoid uploading to git hub the installed dependencies to avoid `run` conflicts
+
+node_modules/

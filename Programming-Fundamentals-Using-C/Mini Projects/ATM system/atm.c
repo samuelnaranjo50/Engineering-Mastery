@@ -82,7 +82,7 @@ int main ()
     }
     
 
-
+    user_
 
 }
 
@@ -143,7 +143,7 @@ void deposit_money (float *deposit_request, float *account_money, float *deposit
     }
     while (strcmp(validate_deposit, "yes") != 0 && strcmp(validate_deposit, "no") != 0 );
 
-    if (strcmp(validate_deposit, "yes") == 0)
+    if (strcm(validate_deposit, "yes") == 0)
     {
         *deposited_money += *deposit_request;
 

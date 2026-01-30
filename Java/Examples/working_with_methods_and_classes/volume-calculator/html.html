@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* --- CSS VARIABLES FOR EASY THEME CHANGE --- */
+        :root {
+            --color-primary: #00bcd4; /* Cyan/Teal */
+            --color-secondary: #ff9800; /* Orange/Accent */
+            --color-background: #1a1a2e; /* Dark Blue/Purple */
+            --color-text: #f0f0f0;
+            --color-card: #2c2c44;
+            --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-body: 'Roboto', Arial, sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        /* --- BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--color-secondary);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--color-text);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--color-secondary);
+            border-bottom: 3px solid var(--color-primary);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* --- UTILITIES --- */
+        section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            display: inline-block;
+        }
+
+        .btn.primary {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+        }
+
+        .btn.secondary {
+            background-color: transparent;
+            border: 2px solid var(--color-text);
+            color: var(--color-text);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: rgba(26, 26, 46, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+
+        .navbar nav a {
+            margin-left: 25px;
+            font-size: 1.1rem;
+            color: var(--color-text);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            gap: 40px;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            color: var(--color-primary);
+            margin: 10px 0;
+        }
+
+        .hero-content h2 {
+            font-size: 2.2rem;
+            height: 30px; 
+            color: var(--color-secondary);
+        }
+
+        .hero-content .bio {
+            margin: 20px 0 30px;
+            font-size: 1.2rem;
+            max-width: 500px;
+        }
+
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--color-card);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-actions a {
+            margin-right: 15px;
+        }
+
+        /* --- SKILLS SECTION --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .skill-card {
+            background-color: var(--color-card);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            color: var(--color-secondary);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- PROJECTS SECTION --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--color-card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform var(--transition-speed);
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            padding: 15px 15px 5px;
+            color: var(--color-primary);
+        }
+
+        .project-card p {
+            padding: 0 15px 15px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .project-links {
+            padding: 10px 15px 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .project-links i {
+            margin-right: 5px;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: var(--color-text);
+        }
+
+        .social-links a:hover {
+            color: var(--color-primary);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--color-card);
+            font-size: 0.9rem;
+        }
+
+        footer i {
+            color: red;
+        }
+
+        /* --- MEDIA QUERIES (RESPONSIVENESS) --- */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar nav {
+                padding-top: 10px;
+            }
+
+            .navbar nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">YourName.dev</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p>Hello, I'm</p>
+                <h1>[Your Name]</h1>
+                <h2 id="typing-text"></h2>
+                <p class="bio">A passionate [e.g., Full-Stack] Developer specializing in building high-performance, scalable web applications.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn primary">View Work</a>
+                    <a href="your-resume.pdf" target="_blank" class="btn secondary">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile-pic.jpg" alt="Your Profile Picture">
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">About Me</h2>
+            <p>I thrive on turning complex problems into elegant, maintainable code. My journey in development began with [brief personal story, e.g., building a simple calculator], and I haven't looked back. I am committed to clean architecture, continuous learning, and delivering impactful digital solutions.</p>
+            <p>When I'm not coding, I enjoy [hobby related to problem-solving, e.g., playing chess, building mechanical keyboards].</p>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">My Toolkit</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>Frontend</h3>
+                    <p>React, Next.js, HTML5, CSS3, JavaScript (ES6+), SASS, Tailwind CSS.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend</h3>
+                    <p>Node.js, Express, Python (Django/Flask), REST APIs, authentication.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database & DevOps</h3>
+                    <p>PostgreSQL, MongoDB, SQL, Git/GitHub, Docker, AWS/Azure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project-1-thumb.png" alt="Project 1 Thumbnail">
+                    <h3>Project Name 1: [E-commerce Platform]</h3>
+                    <p>A full-stack application built with React, Node.js, and MongoDB, featuring secure payment integration and admin analytics.</p>
+                    <div class="project-links">
+                        <a href="[Live Demo Link]" target="_blank"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="[GitHub Link]" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-2-thumb.png" alt="Project 2 Thumbnail">
+                    <h3>Project Name 2: [Task Manager API]</h3>
+                    <p>A scalable, clean architecture REST API written in Python/Django, optimized for high traffic.</p>
+                    <div class="project-links">
+                        <a href="[Live Demo Link]" target="_blank"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="[GitHub Link]" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-3-thumb.png" alt="Project 3 Thumbnail">
+                    <h3>Project Name 3: [Data Visualization Tool]</h3>
+                    <p>A client-side tool using Vue.js and D3.js to render complex financial data dashboards in real-time.</p>
+                    <div class="project-links">
+                        <a href="[Live Demo Link]" target="_blank"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="[GitHub Link]" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I'm currently open to new opportunities. Whether you have a question or just want to say hi, my inbox is always open!</p>
+            <a href="mailto:your.email@example.com" class="btn primary large">Email Me</a>
+            <div class="social-links">
+                <a href="[LinkedIn URL]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="[GitHub URL]" target="_blank" aria-label="GitHub"><i class="fab fa-github-square fa-2x"></i></a>
+                <a href="[Twitter/X URL]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. Built with <i class="fas fa-heart"></i> and code.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Edit these roles to match your specialization!
+            const roles = ["Software Engineer", "Full-Stack Developer", "AI/ML Enthusiast", "Code Architect"];
+            const typingElement = document.getElementById('typing-text');
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let delay = 150;
+
+            function type() {
+                const currentRole = roles[roleIndex];
+                
+                if (isDeleting) {
+                    typingElement.textContent = currentRole.substring(0, charIndex--);
+                    delay = 50;
+                } else {
+                    typingElement.textContent = currentRole.substring(0, charIndex++);
+                    delay = 150;
+                }
+
+                if (!isDeleting && charIndex === currentRole.length + 1) {
+                    delay = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    delay = 500;
+                }
+
+                setTimeout(type, delay);
+            }
+
+            setTimeout(type, 500); 
+        });
+    </script>
+</body>
+</html>
